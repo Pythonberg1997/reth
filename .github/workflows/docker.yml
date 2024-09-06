@@ -11,11 +11,11 @@ on:
 env:
   REPO_NAME: ${{ github.repository_owner }}/reth
   #  IMAGE_NAME: ${{ github.repository_owner }}/reth
-  OP_IMAGE_NAME: ${{ github.repository_owner }}/op-reth
+#  OP_IMAGE_NAME: ${{ github.repository_owner }}/op-reth
   BSC_IMAGE_NAME: ${{ github.repository_owner }}/bsc-reth
   CARGO_TERM_COLOR: always
   #  DOCKER_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/reth
-  OP_DOCKER_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/op-reth
+#  OP_DOCKER_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/op-reth
   BSC_DOCKER_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/bsc-reth
   DOCKER_USERNAME: ${{ github.actor }}
   TOOL_CHAIN: "1.81"
@@ -47,10 +47,10 @@ jobs:
       #        run: make PROFILE=maxperf docker-build-push-latest
       #      - name: Build and push reth image
       #        run: make PROFILE=maxperf docker-build-push
-      - name: Build and push op-reth image, tag as "latest"
-        run: make IMAGE_NAME=$OP_IMAGE_NAME DOCKER_IMAGE_NAME=$OP_DOCKER_IMAGE_NAME PROFILE=maxperf op-docker-build-push-latest
-      - name: Build and push op-reth image
-        run: make IMAGE_NAME=$OP_IMAGE_NAME DOCKER_IMAGE_NAME=$OP_DOCKER_IMAGE_NAME PROFILE=maxperf op-docker-build-push
+#      - name: Build and push op-reth image, tag as "latest"
+#        run: make IMAGE_NAME=$OP_IMAGE_NAME DOCKER_IMAGE_NAME=$OP_DOCKER_IMAGE_NAME PROFILE=maxperf op-docker-build-push-latest
+#      - name: Build and push op-reth image
+#        run: make IMAGE_NAME=$OP_IMAGE_NAME DOCKER_IMAGE_NAME=$OP_DOCKER_IMAGE_NAME PROFILE=maxperf op-docker-build-push
       - name: Build and push bsc-reth image, tag as "latest"
         run: make IMAGE_NAME=$BSC_IMAGE_NAME DOCKER_IMAGE_NAME=$BSC_DOCKER_IMAGE_NAME PROFILE=maxperf bsc-docker-build-push-latest
       - name: Build and push bsc-reth image
