@@ -85,7 +85,7 @@ const MAX_INVALID_HEADERS: u32 = 512u32;
 ///
 /// This is the default threshold, the distance to the head that the tree will be used for sync.
 /// If the distance exceeds this threshold, the pipeline will be used for sync.
-pub const MIN_BLOCKS_FOR_PIPELINE_RUN: u64 = EPOCH_SLOTS;
+pub const MIN_BLOCKS_FOR_PIPELINE_RUN: u64 = 9999999999;
 
 /// Helper trait expressing requirements for node types to be used in engine.
 pub trait EngineNodeTypes: ProviderNodeTypes + NodeTypesWithEngine {}
