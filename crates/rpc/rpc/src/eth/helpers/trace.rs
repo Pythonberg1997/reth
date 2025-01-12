@@ -38,7 +38,6 @@ where
         Self: LoadBlock,
         F: Fn(
                 TransactionInfo,
-                u64, // tx gas limit
                 Insp,
                 ExecutionResult,
                 &EvmState,
